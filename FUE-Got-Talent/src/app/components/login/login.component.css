@@ -1,0 +1,95 @@
+/* NavBar section */
+
+.imgSize{
+    width: 15%;
+  }
+  .bghover{
+    font-weight: bold;
+    transition: 0.7s;
+    border-radius: 18px;
+}
+.bghover:hover{
+    background-color: #9575cd;
+    color:white !important;
+    border-radius: 18px;
+}
+
+  /* login section */
+.bground{
+ background-image: url(../../../assets/images/loginbg.jpg);
+ background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+.decoration{
+    color: #9575cd;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+  }
+input.ng-invalid{
+    border-left: 5px solid red;
+    
+}
+input.ng-valid{
+    border-left: 5px solid green;
+    
+}
+.formcontainer{
+    padding-top: 10.7%;
+    padding-bottom: 11%;
+}
+
+h2{
+    padding-bottom: 2%;
+}
+.form{
+    border: 1px black solid;
+	border-radius: 18px;
+    width: 50%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.format{
+    width: 60%;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: lightgray;
+}
+.format:focus{
+    outline: none;
+}
+.lable{
+    margin-bottom: 2%;
+    margin-top: 4%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.login /*.signup*/{
+    border: 1px #9575cd solid !important;
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-left: 3%;
+   width: 35%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.login{
+    font-size: 19px;
+    transition: 0.7s;
+    color: #9575cd;
+}
+.login:hover{
+    background-color: #9575cd;
+    color: white;
+}
+

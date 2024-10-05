@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+    <div class="container px-5">
+        <img src="../../../assets/images/FUE.jpeg" class="imgSize" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#header">Download</a></li>
+            </ul>
+            <a class="btn feedbg me-lg-3" href="#feedBack"><i class="bi-chat-text-fill me-2"></i> Send Feedback</a>
+            <!-- <button class="btn rounded-pill px-3 mb-2 mb-lg-0 feedbg" data-bs-toggle="modal" data-bs-target="#feedBack">
+                <span class="d-flex align-items-center">
+                    <i class="bi-chat-text-fill me-2"></i>
+                    <span class="small">Send Feedback</span>
+                </span>
+            </button> -->
+            <a class="btn btn-outline-dark login" routerLink="/login"> <i class="fa-solid fa-arrow-right-to-bracket"></i> LogOut</a>
+        </div>
+    </div>
+  </nav>
+
+  <!-- filter section -->
+
+<section class="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-4">
+                <select class="form-select" (change)="selectCategory($event)" aria-label="Default select example">
+                    <option selected value="All">All</option>
+                    <option value="Music">Music</option>
+                    <option value="Singing">Singing</option>
+                    <option value="FootBall">Football</option>
+                    <option value="Squash">Squash</option>
+                  </select>
+            </div>
+            <div class="col col-lg-4">
+                <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select></div>
+            <div class="col col-lg-4">
+                <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select></div>
+        </div>
+    </div>
+</section>
+
+<!-- video feed section -->
+
+<section class="videos my-5">
+    <div class="container">
+       <div class="row">
+           <div class="col col-lg-12 my-3" *ngFor="let data of Posts">
+            <a routerLink="video/{{data.id}}" class="videotxt">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <div>
+                                    <img [src]="data.thumbnail" width="600" height="300" alt="">
+                                    <!-- <video width="600" height="300" controls>
+                                        <source [src]="data.src" type="video/mp4">
+                                    </video> -->
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content profile-content">
+                                <h4><strong>{{data.category}}</strong></h4>
+                                <p><i class="fa fa-clock-o">{{ data.dateTime.toDate()| date:'short'}}</i> </p>
+                                <h5>
+                                      <img [src]="data.image" alt="" class="userImage">{{data.name}}
+                                </h5>
+                                <p class="">{{data.description}}</p>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    </a>
+           </div>
+       </div>
+    </div>
+</section>
+

@@ -1,0 +1,117 @@
+/* NavBar */
+.imgSize{
+    width: 15%;
+  }
+  .bghover{
+    font-weight: bold;
+    transition: 0.7s;
+    border-radius: 18px;
+}
+.bghover:hover{
+    background-color: #9575cd;
+    color:white !important;
+    border-radius: 18px;
+}
+
+/* signup section*/
+.error{
+  color: red;
+  margin-top: 0;
+}
+.form{
+  /* border: 1px black solid;
+border-radius: 18px; */
+  padding-top: 5%;
+  padding-bottom: 2%;
+  margin-top: 10%;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.format{
+    width: 60%;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: lightgray;
+    padding-bottom: 2%;
+    margin-bottom: 7%;
+}
+.format:focus{
+    outline: none;
+}
+
+input.ng-invalid{
+  border-left: 5px solid red !important;
+  
+}
+input.ng-valid{
+  border-left: 5px solid green !important;
+  
+}
+
+h2
+{
+text-align: center;
+margin-top: 5%;
+color:#7e57c2
+}
+
+
+.signupbtn /*.signup*/{
+  border: 1px #9575cd solid !important;
+  background-color:#9575cd;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  margin-left: 3%;
+ width: 35%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.signupbtn{
+  font-size: 19px;
+  transition: 0.7s;
+  color: white;
+}
+.signupbtn:hover{
+  background-color: white;
+  color:#9575cd;
+}
+
+.sss
+{
+    
+  border-color: lightgray;
+  background-color: #9575cd;
+  color: white;
+    padding: 2px !important;
+    width: 63% !important;
+    height: 40px;
+    margin-top: 1% !important;
+    margin-bottom: 6% !important;
+    border-radius:10px !important;
+}
+.sss:focus{
+  outline: none;
+}
+
+hr
+{
+    width: 60%;
+    height: 3px;
+    color: #7e57c2;
+    margin-top: 0;
+}
+
+  .col-md-6{
+    /* background: linear-gradient(to right,#7e57c2, #9575cd); */
+    margin-left: -7.5%;
+    width: 60% !important;
+    background-image: url("../../../assets/images/Sing.jpeg");
+    background-size: 120%;
+  }
+
+
+
+

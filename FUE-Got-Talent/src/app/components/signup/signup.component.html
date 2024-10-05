@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+  <div class="container px-5">
+    <!-- <a class="navbar-brand fw-bold" href="#page-top">FGTalent</a> -->
+
+    <img src="../../../assets/images/FUE.jpeg" class="imgSize">
+    
+      <i class="bi-list"></i>
+    
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#header">Download</a></li>
+      </ul>
+      <!-- <a class="btn feedbg me-lg-3" href="#feedBack"><i class="bi-chat-text-fill me-2"></i> Send Feedback</a> -->
+      <!-- <button class="btn rounded-pill px-3 mb-2 mb-lg-0 feedbg" data-bs-toggle="modal" data-bs-target="#feedBack">
+        <span class="d-flex align-items-center">
+          <i class="bi-chat-text-fill me-2"></i>
+          <span class="small">Send Feedback</span>
+        </span>
+      </button> -->
+    </div>
+  </div>
+  </nav>
+
+<!-- signUp section -->
+<section class="signup">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+  
+      <!-- <h1 class="H1">Make a Dream.</h1> -->
+      <!-- <img src="images.jpg"> -->
+  
+      </div>
+      <div class="col">
+  
+        <form [formGroup]="signUpForm" (ngSubmit)="submit()" class="form">
+            <h2>Signup</h2>
+              <input class="format" type="text" placeholder="User Name" formControlName="name">
+              <input class="format" type="text" placeholder="PhoneNumber" formControlName="PhoneNumber">
+              <input class="format" type="email" placeholder="E-mail" formControlName="email" >
+
+            <div class="drop-down mx-auto">
+              <select class="sss" (change)="selectCategory($event)">
+                <option value="Football">Football</option>
+                <option value="Music">Music</option>
+                <option value="Singing">Singing</option>	
+                <option value="Squash">Squash</option>  
+              </select>
+              </div> 
+              
+              <input class="format" type="password"  value="" placeholder="Password" formControlName="password">
+              <input class="format" type="password"  value="" placeholder="Re-Password" formControlName="confirmPassword" >
+              <p *ngIf="signUpForm.errors?.['passwordsDontMatch']" class="error">Passwords should match</p>
+                <!-- <a  class="btn btn-outline-dark signup" href="">SignUp</a> -->
+              <input class="btn signupbtn" type="submit" name="signup" value="Sign up" >
+              <!-- <button class="btn signupbtn" type="submit" routerLink="/login" >Sign up</button> -->
+                <hr class="mx-auto">
+                
+                <p>Already have an account? <a routerLink="/login">login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+   
+</section>

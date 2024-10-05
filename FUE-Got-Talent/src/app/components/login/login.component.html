@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+    <div class="container px-5">
+      <a class="nav-link" routerLink=""><img src="../../../assets/images/FUE.jpeg" class="imgSize" alt=""></a>
+    </div>
+    <i class="bi-list"></i>
+    
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#header">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="bground">
+<section>
+    <div class="container formcontainer">
+        <form  [formGroup]="loginForm" class="form mx-auto" (ngSubmit)="submit()">
+            <h2 class=" decoration mx-2">Login</h2>
+            <p class="lable mx-2 decoration">E-mail</p>    
+            <input  class="mx-2 format" type="text"  placeholder="E-mail" formControlName="email">    
+            
+            <p class="lable mx-2 decoration">Password </p>    
+            <input class="mx-2 format" type="Password" name="Pass" placeholder="Password" formControlName="password">    
+            <p class="mx-2 lable">
+                <!-- <a class="btn login" routerLink="login/home" type="submit">Login</a> -->
+                <input class="btn login" type="submit" name="log" value="Login" >        
+                <!-- <a class="btn signup" routerLink="signup">SignUp</a>  -->
+            </p>
+            
+           
+            <p class=" my-5 mx-2">Don't have account <a  routerLink="signup">SignUp</a> ?</p>
+        </form>
+    </div>
+</section>
+</div>

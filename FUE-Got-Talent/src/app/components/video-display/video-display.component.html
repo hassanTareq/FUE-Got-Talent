@@ -1,0 +1,93 @@
+<!-- NavBar section -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+    <div class="container px-5">
+        <img src="../../../assets/images/FUE.jpeg" class="imgSize" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3 bghover" href="#header">Download</a></li>
+            </ul>
+            <a class="btn feedbg me-lg-3" href="#feedBack"><i class="bi-chat-text-fill me-2"></i> Send Feedback</a>
+            <!-- <button class="btn rounded-pill px-3 mb-2 mb-lg-0 feedbg" data-bs-toggle="modal" data-bs-target="#feedBack">
+                <span class="d-flex align-items-center">
+                    <i class="bi-chat-text-fill me-2"></i>
+                    <span class="small">Send Feedback</span>
+                </span>
+            </button> -->
+            <a class="btn btn-outline-dark login" routerLink="/login"> <i class="fa-solid fa-arrow-right-to-bracket"></i> LogOut</a>
+        </div>
+    </div>
+  </nav>
+<!-- video section -->
+<section class="video">
+    <!-- <div class="row"> -->
+        <!-- <div class="col col-lg-6 px-0"> -->
+            <div class="row mx-0">
+                 <!-- video section -->
+                <div class="col col-lg-10">
+                    <video class="Vsize" controls [src]="post.postVideo" type="video/mp4"></video>
+                </div>
+                <!-- rating title section -->
+                <div class="col col-lg-10 mt-3 card">
+                    <div class="title">
+                    <h4><strong>{{post.name}}</strong></h4>
+                    <br>
+                    <h5>
+                        Rate: 4.6
+                    </h5>
+                    <p>
+                        <button class="btn feedbg my-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">More information....</button>
+                    </p>
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class=" card-body">
+                            <div *ngFor="let data of post.form | keyvalue">
+                                <div class="my-3">
+                                    <h5>{{data.key}}</h5>
+                                    <h6 class="formcolor mx-3">{{data.value}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                          <h5>You can contact me through this E-mail:</h5>
+                          <p>
+                            <a href="mailto:{{talentsEmail}}">{{talentsEmail}}</a>
+                          </p>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col col-lg-10 mt-3 card">
+                    <div class="container px-0">
+                        <form   class="form mx-auto" [formGroup]="commentForm" class="form mx-auto" (ngSubmit)="submit()">
+                            <input type="text" class="form-control w-50 mt-3" placeholder="Add comment...." aria-label="First name" formControlName="comment">
+                            <input class="btn feedbg me-lg-3 mx-5 my-3" type="submit" name="signup" value="Add" >
+                            <!-- <a class="btn feedbg me-lg-3 mx-5 my-3">Add</a> -->
+                       </form>
+                        <div class="row ">
+                            <div class="col col-lg-12 my-3" *ngFor="let data of comments">
+                                <img [src]="data.image" class="userImage" alt="Userimg">{{data.name}}<i class="fa fa-clock-o mx-3">{{ data.dateTime.toDate() | date:'short'}}</i>
+                                <h5 class="Cplace">{{data.text}}</h5>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="col col-lg-6 px-0 card">
+            
+          
+        </div> -->
+    <!-- </div> -->
+</section>
+
+
+<!-- <div class="col col-lg-6">
+    <img [src]="data.src" class="userimg" alt="">
+</div>
+<div class="col col-lg-6">
+<h5></h5>
+<p>{{data.comment}}</p>
+</div> -->
